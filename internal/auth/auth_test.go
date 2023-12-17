@@ -10,7 +10,7 @@ func TestGetAPIKey(t *testing.T) {
 		input    http.Header
 		expected string
 	}{
-		"header present":        {input: http.Header{"Authorization": []string{"ApiKey 12345"}}, expected: "12345"},
+		"header present":        {input: http.Header{"Authorization": []string{"ApiKey 1235"}}, expected: "12345"},
 		"header missing":        {input: http.Header{"Foo": []string{"123"}}, expected: ""},
 		"malformed auth header": {input: http.Header{"Authorization": []string{"ApiKey12345"}}, expected: ""},
 	}
