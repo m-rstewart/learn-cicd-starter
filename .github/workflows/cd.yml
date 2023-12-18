@@ -10,12 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      name: check out code
-      uses: actions/checkout@v4.1.1
+      - name: check out code
+        uses: actions/checkout@v4.1.1
 
-      name: Setup Go environment
-      uses: actions/setup-go@v5.0.0
+      - name: Setup Go environment
+        uses: actions/setup-go@v5.0.0
 
-      name: Build the project
-      run: ./scripts/buildprod.sh
-            
+      - name: Build the project
+        run: ./scripts/buildprod.sh
